@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JS Example</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="../../dist/vanilla/index.js"></script>
+    <script>
+      // Replace with your own address and/or SolTag (only one is required)
+      const SOL_ADDRESS = "3HR43n6TqQkJXdiDkvr4nA1LCRVVVCTFDEQTMmeohVtg";
+      const SOLTAG = "raccoon";
+
+      // Replace with your own products
+      const PRODUCTS = [
+        {
+          id: "1",
+          name: "Dog Wif Hat",
+          image:
+            "https://dogwifcoin.org/wp-content/uploads/2023/11/wif_hat.jpg",
+          description: "WIF isn't literally just a dog with a hat.",
+          // Price in SOL
+          price: 0.1,
+        },
+      ];
+
+      // Initialize Solwire
+      const solwire = new Solwire({
+        redirectUri: "http://example.com/success",
+      });
+
+      // Amount is added to products total price, remove if not needed
+      const extraAmount = 0.2;
+
+      // Set either address or SolTag, or both
+      solwire.setAddress(SOL_ADDRESS);
+      solwire.setSolTag(SOLTAG);
+
+      // Set either products or amount, or both (amount will be added to products total price)
+      solwire.setProducts(PRODUCTS);
+      solwire.setAmount(extraAmount);
+
+      // Optional: Set metadata
+      solwire.setMetadata({
+        order_id: "1",
+      });
+
+      solwire.render("#app");
+    </script>
+  </body>
+</html>

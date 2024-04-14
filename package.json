@@ -1,0 +1,60 @@
+{
+  "name": "@solwire/solwire-js",
+  "version": "1.1.0",
+  "description": "React & Vanilla JS library for the Solwire API.",
+  "main": "dist/vanilla/index.js",
+  "module": "dist/vanilla/index.esm.js",
+  "types": "dist/vanilla/index.d.ts",
+  "exports": {
+    "./vanilla": {
+      "import": "./dist/vanilla/index.esm.js",
+      "require": "./dist/vanilla/index.js"
+    },
+    "./react": {
+      "import": "./dist/react/index.js",
+      "require": "./dist/react/index.js"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "autoprefixer": "^10.4.19",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.368.0",
+    "postcss": "^8.4.38",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss": "^3.4.3",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^0.9.0",
+    "zod": "^3.22.4"
+  },
+  "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^16.18.96",
+    "@types/react": "^18.2.77",
+    "@types/react-dom": "^18.2.25",
+    "rollup": "^4.14.2",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-import-css": "^3.5.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}
